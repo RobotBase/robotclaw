@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robotclaw"
+version = "0.2.0"
+description = "Bridge OpenClaw AI agents with physical servo robots — connecting the digital mind to the physical world"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "RobotClaw Contributors" },
+]
+keywords = ["openclaw", "robot", "servo", "ai-agent", "robotics", "lobot", "bus-servo"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Interface Engine/Protocol Translator",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pyserial>=3.5",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "build",
+    "twine",
+]
+
+[project.urls]
+Homepage = "https://github.com/RobotBase/robotclaw"
+Repository = "https://github.com/RobotBase/robotclaw"
+Issues = "https://github.com/RobotBase/robotclaw/issues"
+Changelog = "https://github.com/RobotBase/robotclaw/blob/main/CHANGELOG.md"
+
+[project.scripts]
+robotclaw-scan = "robotclaw.cli:scan_main"
+robotclaw-teach = "robotclaw.cli:teach_main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
