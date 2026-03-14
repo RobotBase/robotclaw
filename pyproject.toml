@@ -4,15 +4,15 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "robotclaw"
-version = "0.2.0"
-description = "Bridge OpenClaw AI agents with physical servo robots — connecting the digital mind to the physical world"
+version = "0.2.1"
+description = "Let AI control real robots — Python robotics framework for servo control, motion teaching, and AI agent integration"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"
 authors = [
     { name = "RobotClaw Contributors" },
 ]
-keywords = ["openclaw", "robot", "servo", "ai-agent", "robotics", "lobot", "bus-servo"]
+keywords = ["robotics", "robot", "servo", "ai-agent", "openclaw", "lobot", "bus-servo", "motion-control", "biped-robot", "walking-robot", "python-robotics", "motion-teaching"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
